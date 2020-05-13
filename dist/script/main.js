@@ -10956,7 +10956,7 @@ return jQuery;
 // IMPORT JQUERY
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  console.log('PROJECT OK');
+  console.log('WORKING IN PROGRESS - MOBILE FIRST');
 });
 })();
 

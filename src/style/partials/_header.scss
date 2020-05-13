@@ -1,0 +1,37 @@
+/****************************************************
+* HEADER
+****************************************************/
+
+.header--wrapper{
+  @include wrapper(90%);
+}
+
+// NAVBAR
+nav{
+  @include u-flex-center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 0;
+}
+
+nav::after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -10%;
+  height: 1px;
+  width: calc(100vw + 10%);
+  background-color: $text-color__default;
+}
+
+// JUMBOTRON
+.header--jumbotron{
+  margin-top: 100px;
+}
+
+.jumbotron--text{
+  text-align: center;
+  h3{
+    margin: 30px 0;
+  }
+}

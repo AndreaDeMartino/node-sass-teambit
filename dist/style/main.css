@@ -1,1 +1,75 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
+
+400;700&display=swap);
+/****************************************************
+* VARIABLES
+****************************************************/
+/****************************************************
+* COMMON STYLES
+****************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #4E3D1E;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/****************************************************
+* HEADER
+****************************************************/
+
+.header--wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 0;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: -10%;
+  height: 1px;
+  width: calc(100vw + 10%);
+  background-color: #4E3D1E;
+}
+
+.header--jumbotron {
+  margin-top: 100px;
+}
+
+.jumbotron--text {
+  text-align: center;
+}
+
+.jumbotron--text h3 {
+  margin: 30px 0;
+}
+
 

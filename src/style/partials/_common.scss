@@ -1,0 +1,51 @@
+/****************************************************
+* COMMON STYLES
+****************************************************/
+
+// GENERAL RULES
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $text-color__default;
+  font-family: $main-font;
+}
+
+h1{
+  font-size: 50px;
+}
+
+h2{
+  font-size: 26px;
+}
+
+h3{
+  font-size: 22px;
+}
+
+a{
+  text-decoration: none;
+}
+// MIXINS
+
+// DisplayInline for ul list -- param: padding
+@mixin u-inline-block($padding: 3px){
+  li{
+    list-style: none;
+    display: inline-block;
+    padding-right: $padding;
+  }
+}
+// Flex Center -- param: direction
+@mixin u-flex-center($direction: row){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// Custom Wrapper -- param: widh
+@mixin wrapper($width: 100%){
+  width: $width;
+  margin: 0 auto;
+}
