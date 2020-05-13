@@ -2,7 +2,16 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
-  console.log('WORKING IN PROGRESS - MOBILE FIRST');
+  // VARIABLES
+  var hamburger = $('.nav__hamburger');
+  var hamubergerMenu = $('.nav__hamburger--mobile');
+
+  // HAMBURGER
+  hamburger.click( () => {
+    $('.nav__hamburger--icon').toggleClass('fa-bars fa-times');
+    hamubergerMenu.toggle();
+  });
+
 });
 
 

@@ -3,12 +3,34 @@
 ****************************************************/
 
 // COLORS
-$text-color__default: #4E3D1E;
-$btn-color__blue: #2e4691;
-$main-bg: #ffe7d2;
+$text--default: #4E3D1E;
+$btn--blue: #2e4691;
+$main--bg: #ffe7d2;
 
 // TYPOGRAPHY
-$main-font: 'Open Sans', sans-serif;
+$font--default: 'Open Sans', sans-serif;
 
+h1{
+  font-size: 50px;
+  font-weight: 600;
+}
 
+h2{
+  font-size: 26px;
+}
+
+h3{
+  font-size: 22px;
+  font-weight: 400;
+}
+
+h4{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h5{
+  font-size: 13px;
+  font-weight: 300;
+}
 // SETUP

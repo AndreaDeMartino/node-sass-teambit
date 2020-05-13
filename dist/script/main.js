@@ -10956,7 +10956,14 @@ return jQuery;
 // IMPORT JQUERY
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  console.log('WORKING IN PROGRESS - MOBILE FIRST');
+  // VARIABLES
+  var hamburger = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav__hamburger');
+  var hamubergerMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav__hamburger--mobile'); // HAMBURGER
+
+  hamburger.click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav__hamburger--icon').toggleClass('fa-bars fa-times');
+    hamubergerMenu.toggle();
+  });
 });
 })();
 

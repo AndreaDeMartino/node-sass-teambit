@@ -13,45 +13,70 @@
   
   <div id="app">
 
+    <!-- HEADER -->
     <header class="main-header">
-      <div class="header--wrapper">
+      <div class="header__wrapper">
 
+        <!-- HEADER: Nav -->
         <nav class="header-nav">
-          <div class="nav--logo">
+          <div class="nav__logo">
             <img src="dist/img/logo.svg" alt="Nav-Logo">
           </div>
-          <div class="nav--hamburger">
-            <i class="fas fa-bars"></i>
+          <div class="nav__hamburger">
+            <i class="nav__hamburger--icon fas fa-bars"></i>
           </div>
         </nav>
-      
-      <div class="header--jumbotron">
-        <div class="jumbotron--text">
-          <h1>Understand, recognize and develop your people</h1>
-          <h3>Teambit helps teams create a high performing culture with regular feedback.</h3>
-        </div>
-        <div class="jumbotron--cta">
 
+        <!-- HEADER: Hamburger -->
+        <div class="nav__hamburger--mobile">
+          <ul class="hamburger-list">
+            <li class="hamburger-list__item">Feedback</li>
+            <li class="hamburger-list__item">Surveys</li>
+            <li class="hamburger-list__item">Reviews</li>
+            <li class="hamburger-list__item">Praise</li>
+            <li class="hamburger-list__item">Pricing</li>
+            <li class="hamburger-list__item">Blog</li>
+            <li class="hamburger-list__item">Sign in</li>
+          </ul>
+          <a href="#" class="btn">
+            <img class="btn--logo" src="dist/img/google-logo.svg" alt="logo-google"> Sign up
+          </a>
         </div>
-        <div class="jumbotron--img">
+        
+        <!-- HEADER: Jumbotron -->
+        <div class="header__jumbotron">
 
+          <div class="jumbotron__text">
+            <h1>Understand, recognize and develop your people</h1>
+            <h3>Teambit helps teams create a high performing culture with regular feedback.</h3>
+          </div>
+
+          <div class="jumbotron__cta">
+            <a href="#" class="btn">
+              <img class="btn--logo" src="dist/img/google-logo.svg" alt="logo-google"> Sign up with Google
+            </a>
+            <h5> or</h5>
+            <a href="#" class="btn">
+              <img class="btn--logo" src="dist/img/slack-logo.svg" alt="logo-google"> Sign up with Slack
+            </a>
+            <span> or use your email address <i class="fas fa-long-arrow-alt-right"></i>
+            </span>
+          </div>
+
+          <div class="jumbotron__banner">
+            <img class="jumbotron__banner--logo" src="dist/img/illustration-main.jpg" alt="jumbotron-banner">
+          </div>
         </div>
+
       </div>
-
-
-
-      </div>
-      
-
-
-
-
     </header>
 
+    <!-- MAIN -->
     <main class="main-content">
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="main-footer">
 
     </footer>

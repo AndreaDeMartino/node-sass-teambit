@@ -7,20 +7,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: $text-color__default;
-  font-family: $main-font;
-}
-
-h1{
-  font-size: 50px;
-}
-
-h2{
-  font-size: 26px;
-}
-
-h3{
-  font-size: 22px;
+  color: $text--default;
+  font-family: $font--default;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 a{
@@ -29,15 +19,15 @@ a{
 // MIXINS
 
 // DisplayInline for ul list -- param: padding
-@mixin u-inline-block($padding: 3px){
+@mixin u--list($display: inline-block,$padding: 0){
   li{
     list-style: none;
-    display: inline-block;
+    display: $display;
     padding-right: $padding;
   }
 }
 // Flex Center -- param: direction
-@mixin u-flex-center($direction: row){
+@mixin u--flex-center($direction: row){
   display: flex;
   flex-direction: $direction;
   justify-content: center;
@@ -45,7 +35,33 @@ a{
 }
 
 // Custom Wrapper -- param: widh
-@mixin wrapper($width: 100%){
+@mixin u--wrapper($width: 100%){
   width: $width;
   margin: 0 auto;
+}
+
+// Button -- param: background and color
+@mixin u--btn($bg,$color){
+  @include u--flex-center;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: $bg;
+  color: $color;
+  &--logo{
+    height: 14px;
+    margin-right: 5px;
+  }
+}
+
+// Border bottom line -- param: width and color
+@mixin u--bottom-line ($width: 100%,$color){
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: -10%;
+    height: 1px;
+    width: $width;
+    background-color: $color;
+    opacity: 0.3;
 }

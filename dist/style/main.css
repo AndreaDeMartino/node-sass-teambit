@@ -1,22 +1,12 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-400;700&display=swap);
+400;600;700&display=swap);
 /****************************************************
 * VARIABLES
 ****************************************************/
-/****************************************************
-* COMMON STYLES
-****************************************************/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #4E3D1E;
-  font-family: "Open Sans", sans-serif;
-}
-
 h1 {
   font-size: 50px;
+  font-weight: 600;
 }
 
 h2 {
@@ -25,6 +15,31 @@ h2 {
 
 h3 {
   font-size: 22px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/****************************************************
+* COMMON STYLES
+****************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #4E3D1E;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 a {
@@ -35,12 +50,12 @@ a {
 * HEADER
 ****************************************************/
 
-.header--wrapper {
+.header__wrapper {
   width: 90%;
   margin: 0 auto;
 }
 
-nav {
+.header-nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,7 +65,7 @@ nav {
   padding: 10px 0;
 }
 
-nav::after {
+.header-nav:after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -58,18 +73,104 @@ nav::after {
   height: 1px;
   width: calc(100vw + 10%);
   background-color: #4E3D1E;
+  opacity: 0.3;
 }
 
-.header--jumbotron {
+.nav__hamburger--mobile {
+  display: none;
+  position: relative;
+}
+
+.nav__hamburger--mobile .hamburger-list {
+  margin-top: 30px;
+}
+
+.nav__hamburger--mobile .hamburger-list li {
+  list-style: none;
+  display: list-item;
+  padding-right: 0;
+}
+
+.nav__hamburger--mobile .hamburger-list__item {
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+.nav__hamburger--mobile .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #fff;
+  color: #2e4691;
+  border: 1px solid #2e4691;
+}
+
+.nav__hamburger--mobile .btn--logo {
+  height: 14px;
+  margin-right: 5px;
+}
+
+.nav__hamburger--mobile:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: -10%;
+  height: 1px;
+  width: calc(100vw + 10%);
+  background-color: rgba(78, 61, 30, 0.5);
+  opacity: 0.3;
+  height: 3px;
+  bottom: -20px;
+}
+
+.header__jumbotron {
   margin-top: 100px;
 }
 
-.jumbotron--text {
+.jumbotron__text {
   text-align: center;
 }
 
-.jumbotron--text h3 {
+.jumbotron__text h3 {
   margin: 30px 0;
+}
+
+.jumbotron__cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron__cta .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #2e4691;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.jumbotron__cta .btn--logo {
+  height: 14px;
+  margin-right: 5px;
+}
+
+.jumbotron__cta span {
+  margin-top: 10px;
+}
+
+.jumbotron__banner--logo {
+  width: 100%;
+  margin: 30px 0 50px 0;
 }
 
 

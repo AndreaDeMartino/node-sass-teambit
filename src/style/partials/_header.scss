@@ -2,36 +2,73 @@
 * HEADER
 ****************************************************/
 
-.header--wrapper{
-  @include wrapper(90%);
+.header__wrapper{
+  @include u--wrapper(90%);
 }
 
 // NAVBAR
-nav{
-  @include u-flex-center;
+.header-nav{
+  @include u--flex-center;
   justify-content: space-between;
   position: relative;
   padding: 10px 0;
+  &:after{
+    @include u--bottom-line(calc(100vw + 10%),$text--default);
+  }
 }
 
-nav::after{
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  left: -10%;
-  height: 1px;
-  width: calc(100vw + 10%);
-  background-color: $text-color__default;
+// NAVBAR: Hamburger
+.nav__hamburger--mobile{
+  display: none;
+  position: relative;
+  .hamburger-list{
+    @include u--list(list-item);
+    margin-top: 30px;
+    &__item{
+      padding-bottom: 20px;
+      font-weight: 600;
+    }
+  }
+  .btn{
+    @include u--btn(#fff,$btn--blue);
+    border: 1px solid $btn--blue;
+  }
+  &:after{
+    @include u--bottom-line(calc(100vw + 10%),rgba($text--default, 0.5));
+    height: 3px;
+    bottom: -20px;
+  }
 }
 
 // JUMBOTRON
-.header--jumbotron{
+.header__jumbotron{
   margin-top: 100px;
 }
 
-.jumbotron--text{
+.jumbotron__text{
   text-align: center;
   h3{
     margin: 30px 0;
   }
 }
+
+.jumbotron__cta{
+  @include u--flex-center(column);
+
+  .btn{
+    @include u--btn($btn--blue,#fff);
+    margin: 10px 0;
+  }
+  
+  span{
+    margin-top: 10px;
+  }
+}
+
+.jumbotron__banner{
+  &--logo{
+    width: 100%;
+    margin: 30px 0 50px 0;
+  }
+}
+
