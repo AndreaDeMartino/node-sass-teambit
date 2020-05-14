@@ -8,9 +8,24 @@
 }
 
 .people__wrapper:after{
-  @include u--bottom-line(100%,$text--default);
+  @include u--bottom-line(100%,$text--default,0,-10px);
 }
 
 .solution{
   @include u--main-section;
+  .logo-custom{
+    width: 60px;
+  }
+}
+
+// Medium Device
+@media all and (min-width: 768px){
+.people__items,
+.solution__items{
+  @include u--flex-center;
+  flex-wrap: wrap;
+  .item{
+    margin-right: 50px;
+  }
+  }
 }

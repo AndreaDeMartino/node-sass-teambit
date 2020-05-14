@@ -59,6 +59,8 @@
 
 // JUMBOTRON
 .jumbotron{
+  max-width: 1150px;
+  margin: 0 auto;
   margin-top: 100px;
   &__text{
   text-align: center;
