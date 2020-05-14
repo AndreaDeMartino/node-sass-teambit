@@ -112,9 +112,10 @@ a {
   bottom: 0;
   left: -10%;
   height: 1px;
-  width: calc(100vw + 10%);
+  width: 115%;
   background-color: #4E3D1E;
   opacity: 0.3;
+  overflow: hidden;
 }
 
 .hamburger--mobile {

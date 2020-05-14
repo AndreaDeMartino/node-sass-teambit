@@ -29,7 +29,8 @@
     }
   }
   &:after{
-    @include u--bottom-line(calc(100vw + 10%),$text--default,-10%);
+    @include u--bottom-line(115%,$text--default,-10%);
+    overflow: hidden;
   }
 }
 
