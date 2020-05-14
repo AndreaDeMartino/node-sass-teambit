@@ -4,7 +4,7 @@
 
 .people{
   position: relative;
-  @include u--main-section;
+  @include u--main-section__lay-1;
 }
 
 .people__wrapper:after{
@@ -12,10 +12,19 @@
 }
 
 .solution{
-  @include u--main-section;
+  @include u--main-section__lay-1;
   .logo-custom{
     width: 60px;
   }
+}
+
+.feedback{
+  @include u--main-section__lay-2;
+}
+
+
+.surveys{
+  @include u--main-section__lay-2(right);
 }
 
 // Medium Device
@@ -27,5 +36,23 @@
   .item{
     margin-right: 50px;
   }
+  }
+}
+
+// Large Device
+@media all and (min-width: 1199px){
+  .feedback,
+  .surveys{
+    &__logo{
+      img{
+        max-width: 768px;
+      }
+    }
+    &__wrapper{
+      @include u--flex-center;
+    }
+    &__info{
+      text-align: left;
+    }
   }
 }
