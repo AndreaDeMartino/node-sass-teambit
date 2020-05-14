@@ -7,18 +7,18 @@
 }
 
 // NAVBAR
-.header-nav{
+.nav{
   @include u--flex-center;
   justify-content: space-between;
   position: relative;
   padding: 10px 0;
   &:after{
-    @include u--bottom-line(calc(100vw + 10%),$text--default);
+    @include u--bottom-line(calc(100vw + 10%),$text--default,-10%);
   }
 }
 
 // NAVBAR: Hamburger
-.nav__hamburger--mobile{
+.hamburger--mobile{
   display: none;
   position: relative;
   .hamburger-list{
@@ -34,41 +34,39 @@
     border: 1px solid $btn--blue;
   }
   &:after{
-    @include u--bottom-line(calc(100vw + 10%),rgba($text--default, 0.5));
+    @include u--bottom-line(calc(100vw + 10%),rgba($text--default, 0.5),-10%);
     height: 3px;
     bottom: -20px;
   }
 }
 
 // JUMBOTRON
-.header__jumbotron{
+.jumbotron{
   margin-top: 100px;
-}
 
-.jumbotron__text{
+  &__text{
   text-align: center;
+
   h3{
     margin: 30px 0;
+    }
+  }
+
+  &__cta{
+    @include u--flex-center(column);
+    .btn{
+      @include u--btn($btn--blue,#fff);
+      margin: 10px 0;
+    }
+    span{
+      margin-top: 10px;
+    }
+  }
+
+  &__banner{
+    &--logo{
+      width: 100%;
+      margin: 30px 0 50px 0;
+    }
   }
 }
-
-.jumbotron__cta{
-  @include u--flex-center(column);
-
-  .btn{
-    @include u--btn($btn--blue,#fff);
-    margin: 10px 0;
-  }
-  
-  span{
-    margin-top: 10px;
-  }
-}
-
-.jumbotron__banner{
-  &--logo{
-    width: 100%;
-    margin: 30px 0 50px 0;
-  }
-}
-

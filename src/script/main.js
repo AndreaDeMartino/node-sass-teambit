@@ -4,7 +4,7 @@ import $ from 'jquery';
 $(document).ready(function () {
   // VARIABLES
   var hamburger = $('.nav__hamburger');
-  var hamubergerMenu = $('.nav__hamburger--mobile');
+  var hamubergerMenu = $('.hamburger--mobile');
 
   // HAMBURGER
   hamburger.click( () => {

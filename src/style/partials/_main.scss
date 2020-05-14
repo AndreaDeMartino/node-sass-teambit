@@ -1,0 +1,16 @@
+/****************************************************
+* MAIN
+****************************************************/
+
+.people{
+  position: relative;
+  @include u--main-section;
+}
+
+.people__wrapper:after{
+  @include u--bottom-line(100%,$text--default);
+}
+
+.solution{
+  @include u--main-section;
+}

@@ -55,13 +55,49 @@ a{
 }
 
 // Border bottom line -- param: width and color
-@mixin u--bottom-line ($width: 100%,$color){
+@mixin u--bottom-line ($width: 100%,$color,$left: 0,$bottom: 0){
     content: '';
     position: absolute;
-    bottom: 0px;
-    left: -10%;
+    bottom: $bottom;
+    left: $left;
     height: 1px;
     width: $width;
     background-color: $color;
     opacity: 0.3;
+}
+
+// Main Section layout
+@mixin u--main-section{
+  background: $main--bg;
+  &__wrapper{
+    @include u--wrapper(90%);
+  }
+
+  &__hero{
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  &__items{
+    .item{
+      @include u--flex-center(column);
+      margin-bottom: 50px;
+      &__logo{
+      width: 100px;
+      margin-bottom: 20px;
+      }
+      &__text{
+        width: 200px;
+        text-align: center;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .item--last{
+      .item__logo{
+        width: 300px;
+      }
+    }
+  }
 }
