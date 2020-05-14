@@ -5,10 +5,9 @@
 .people{
   position: relative;
   @include u--main-section__lay-1;
-}
-
-.people__wrapper:after{
-  @include u--bottom-line(100%,$text--default,0,-10px);
+  &__wrapper:after{
+    @include u--bottom-line(100%,$text--default,0,-10px);
+  }
 }
 
 .solution{
