@@ -1,0 +1,44 @@
+/****************************************************
+* SECTION: TYPE 1 - GENERIC FLEX ELEMENTS
+****************************************************/
+
+  &__wrapper{
+    @include u--wrapper(90%);
+  }
+
+  &__hero{
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  &__items{
+    .item{
+      @include u--flex(column);
+      margin-bottom: 50px;
+      &__logo{
+      width: 140px;
+      height: 100px;
+      margin-bottom: 10px;
+      
+      }
+      &__text{
+        width: 200px;
+        height: 100px;
+        text-align: center;
+      }
+      &:nth-child(3){
+        margin-right: 0;
+      }
+      &:last-child{
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+    }
+    .item--last{
+      width: 100%;;
+      .item__logo{
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }

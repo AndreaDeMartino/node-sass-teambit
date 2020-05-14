@@ -4,14 +4,16 @@
 
 .people{
   position: relative;
-  @include u--main-section__lay-1;
+  background: $main--bg;
+  @import 'partials/section-1';
   &__wrapper:after{
     @include u--bottom-line(100%,$text--default,0,-10px);
   }
 }
 
 .solution{
-  @include u--main-section__lay-1;
+  background: $main--bg;
+  @import 'partials/section-1';
   .logo-custom{
     width: 60px;
   }
@@ -19,21 +21,24 @@
 
 .feedback,
 .reviews{
-  @include u--main-section__lay-2;
+  margin-top: 50px;
+  background: $white;
+  @import 'partials/section-2';
 }
-
 
 .surveys,
 .praise{
-  @include u--main-section__lay-2(right);
+  margin-top: 50px;
+  background: $white;
+  $side: right;
+  @import 'partials/section-2';
 }
 
-
 // Medium Device
-@media all and (min-width: 768px){
+@include tablet{
 .people__items,
 .solution__items{
-  @include u--flex-center;
+  @include u--flex;
   flex-wrap: wrap;
   .item{
     margin-right: 50px;
@@ -42,7 +47,7 @@
 }
 
 // Large Device
-@media all and (min-width: 1199px){
+@include large-desktop{
   .feedback,
   .surveys,
   .reviews,
@@ -53,7 +58,7 @@
       }
     }
     &__wrapper{
-      @include u--flex-center;
+      @include u--flex;
     }
     &__info{
       text-align: left;

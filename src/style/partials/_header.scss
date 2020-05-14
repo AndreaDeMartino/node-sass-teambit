@@ -8,9 +8,8 @@
 
 // NAVBAR
 .nav{
-  @include u--flex-center;
+  @include u--flex(row,space-between);
   height: 60px;
-  justify-content: space-between;
   position: relative;
   padding: 10px 0;
   &__cta{
@@ -23,7 +22,7 @@
   }
   &__list{
     @include u--list(inline-block,30px);
-    @include u--flex-center;
+    @include u--flex;
     .nav__item:last-child{
       padding-right: 0;
     }
@@ -72,7 +71,7 @@
   }
 
   &__cta{
-    @include u--flex-center(column);
+    @include u--flex(column);
     .btn{
       @include u--btn($btn--blue,#fff);
       margin: 10px 0;
@@ -85,7 +84,7 @@
   }
 
   &__banner{
-    @include u--flex-center;
+    @include u--flex;
     &--logo{
       width: 100%;
       margin: 30px 0 50px 0;
@@ -96,10 +95,10 @@
 // MEDIAQUERY
 
 // Small Device
-@media all and (min-width: 576px){
+@include mobile{
   .jumbotron{
     &__cta{
-      @include u--flex-center(row);
+      @include u--flex(row);
       flex-wrap: wrap;
       .btn{
         width: 180px;
@@ -115,7 +114,7 @@
 }
 
 // Medium Device
-@media all and (min-width: 768px){
+@include tablet{
   .nav{
     &__hamburger{
       display: none;
@@ -127,13 +126,13 @@
 }
 
 // Large Device
-@media all and (min-width: 1199px){
+@include large-desktop{
   .nav:after{
     width: 100%;
     left: 0;
   }
   .jumbotron{
-    @include u--flex-center;
+    @include u--flex;
     &__text{
       text-align: left;
     }

@@ -27,11 +27,11 @@ a{
   }
 }
 // Flex Center -- param: direction
-@mixin u--flex-center($direction: row){
+@mixin u--flex($direction: row,$justify: center,$align: center){
   display: flex;
   flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 // Custom Wrapper -- param: widh
@@ -42,7 +42,7 @@ a{
 
 // Button -- param: background and color
 @mixin u--btn($bg,$color){
-  @include u--flex-center;
+  @include u--flex;
   width: 100%;
   padding: 10px 15px;
   border-radius: 7px;
@@ -64,86 +64,4 @@ a{
     width: $width;
     background-color: $color;
     opacity: 0.3;
-}
-
-// Main Section layout 1
-@mixin u--main-section__lay-1{
-  background: $main--bg;
-  &__wrapper{
-    @include u--wrapper(90%);
-  }
-
-  &__hero{
-    padding: 30px 0;
-    text-align: center;
-  }
-
-  &__items{
-    .item{
-      @include u--flex-center(column);
-      margin-bottom: 50px;
-      &__logo{
-      width: 140px;
-      height: 100px;
-      margin-bottom: 10px;
-      
-      }
-      &__text{
-        width: 200px;
-        height: 100px;
-        text-align: center;
-      }
-      &:nth-child(3){
-        margin-right: 0;
-      }
-      &:last-child{
-        margin-bottom: 0;
-        margin-right: 0;
-      }
-    }
-    .item--last{
-      width: 100%;;
-      .item__logo{
-        width: 300px;
-        height: 300px;
-      }
-    }
-  }
-}
-
-// Main Section layout 2
-@mixin u--main-section__lay-2($side: left){
-  margin-top: 50px;
-  background: $white;
-  &__wrapper{
-    @include u--wrapper(90%);
-  }
-  &__logo{
-    @if $side == right{
-      order: 1;
-    }
-    img{
-      width: 100%;
-    }
-  }
-  .info{
-    text-align: center;
-    max-width: 628px;
-    &__title{
-      margin: 30px 0;
-    }
-    &__subtitle{
-      font-weight: 300;
-    }
-    &__more{
-      h4,i{
-        margin: 20px 0;
-        color: $btn--blue;
-      }
-    }
-    &__logo{
-      max-width: 270px;
-    }
-
-  }
 }

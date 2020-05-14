@@ -43,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+/* Phones (landscape phones, 576px and up) */
+/* Tablets (tablets, 768px and up) */
+/* Desktops (desktops, 992px and up) */
+/* Large desktops (large desktops, 1200px and up) */
 /****************************************************
 * HEADER
 ****************************************************/
@@ -54,10 +58,9 @@ a {
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 60px;
-  justify-content: space-between;
   position: relative;
   padding: 10px 0;
 }
@@ -202,7 +205,7 @@ a {
   margin: 30px 0 50px 0;
 }
 
-@media all and (min-width: 576px) {
+@media (min-width: 576px) {
   .jumbotron__cta {
     display: flex;
     flex-direction: row;
@@ -220,7 +223,7 @@ a {
     max-width: 570px;
   }
 }
-@media all and (min-width: 768px) {
+@media (min-width: 768px) {
   .nav__hamburger {
     display: none;
   }
@@ -228,7 +231,7 @@ a {
     display: block;
   }
 }
-@media all and (min-width: 1199px) {
+@media (min-width: 1200px) {
   .nav:after {
     width: 100%;
     left: 0;
@@ -260,6 +263,9 @@ a {
 .people {
   position: relative;
   background: #ffe7d2;
+  /****************************************************
+  * SECTION: TYPE 1 - GENERIC FLEX ELEMENTS
+  ****************************************************/
 }
 .people__wrapper {
   width: 90%;
@@ -300,7 +306,6 @@ a {
   width: 300px;
   height: 300px;
 }
-
 .people__wrapper:after {
   content: "";
   position: absolute;
@@ -314,6 +319,9 @@ a {
 
 .solution {
   background: #ffe7d2;
+  /****************************************************
+  * SECTION: TYPE 1 - GENERIC FLEX ELEMENTS
+  ****************************************************/
 }
 .solution__wrapper {
   width: 90%;
@@ -362,6 +370,9 @@ a {
 .reviews {
   margin-top: 50px;
   background: #fff;
+  /****************************************************
+  * SECTION: TYPE 2 - IMG/TEXT with LX-RX CONTENT
+  ****************************************************/
 }
 .feedback__wrapper,
 .reviews__wrapper {
@@ -400,6 +411,9 @@ a {
 .praise {
   margin-top: 50px;
   background: #fff;
+  /****************************************************
+  * SECTION: TYPE 2 - IMG/TEXT with LX-RX CONTENT
+  ****************************************************/
 }
 .surveys__wrapper,
 .praise__wrapper {
@@ -438,7 +452,7 @@ a {
   max-width: 270px;
 }
 
-@media all and (min-width: 768px) {
+@media (min-width: 768px) {
   .people__items,
 .solution__items {
     display: flex;
@@ -452,7 +466,7 @@ a {
     margin-right: 50px;
   }
 }
-@media all and (min-width: 1199px) {
+@media (min-width: 1200px) {
   .feedback__logo img,
 .surveys__logo img,
 .reviews__logo img,
