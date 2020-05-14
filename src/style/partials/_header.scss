@@ -9,9 +9,25 @@
 // NAVBAR
 .nav{
   @include u--flex-center;
+  height: 60px;
   justify-content: space-between;
   position: relative;
   padding: 10px 0;
+  &__cta{
+    display: none;
+    .btn{
+      @include u--btn(#fff,$btn--blue);
+      border: 1px solid $btn--blue;
+      padding: 8px 10px;
+    }
+  }
+  &__list{
+    @include u--list(inline-block,30px);
+    @include u--flex-center;
+    .nav__item:last-child{
+      padding-right: 0;
+    }
+  }
   &:after{
     @include u--bottom-line(calc(100vw + 10%),$text--default,-10%);
   }
@@ -43,7 +59,6 @@
 // JUMBOTRON
 .jumbotron{
   margin-top: 100px;
-
   &__text{
   text-align: center;
 
@@ -59,14 +74,74 @@
       margin: 10px 0;
     }
     span{
+      width: 100%;
+      text-align: center;
       margin-top: 10px;
     }
   }
 
   &__banner{
+    @include u--flex-center;
     &--logo{
       width: 100%;
       margin: 30px 0 50px 0;
+    }
+  }
+}
+
+// MEDIAQUERY
+
+// Small Device
+@media all and (min-width: 576px){
+  .jumbotron{
+    &__cta{
+      @include u--flex-center(row);
+      flex-wrap: wrap;
+      .btn{
+        width: 180px;
+      }
+      h5{
+        margin: 0 20px;
+      }
+    }
+    &__banner--logo{
+    max-width: 570px;
+    }
+  }
+}
+
+// Medium Device
+@media all and (min-width: 768px){
+  .nav{
+    &__hamburger{
+      display: none;
+    }
+    &__cta{
+      display: block;
+    }   
+  } 
+}
+
+// Large Device
+@media all and (min-width: 1199px){
+  .nav:after{
+    width: 100%;
+    left: 0;
+  }
+  .jumbotron{
+    @include u--flex-center;
+    &__text{
+      text-align: left;
+    }
+    &__cta{
+      flex-direction: row;
+      justify-content: flex-start;
+      span{
+        text-align: left;
+      }
+    }
+    &__banner--logo{
+      width: 570px;
     }
   }
 }

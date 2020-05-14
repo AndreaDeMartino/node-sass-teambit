@@ -60,9 +60,50 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 60px;
   justify-content: space-between;
   position: relative;
   padding: 10px 0;
+}
+
+.nav__cta {
+  display: none;
+}
+
+.nav__cta .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #fff;
+  color: #2e4691;
+  border: 1px solid #2e4691;
+  padding: 8px 10px;
+}
+
+.nav__cta .btn--logo {
+  height: 14px;
+  margin-right: 5px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__list li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.nav__list .nav__item:last-child {
+  padding-right: 0;
 }
 
 .nav:after {
@@ -165,12 +206,84 @@ a {
 }
 
 .jumbotron__cta span {
+  width: 100%;
+  text-align: center;
   margin-top: 10px;
+}
+
+.jumbotron__banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .jumbotron__banner--logo {
   width: 100%;
   margin: 30px 0 50px 0;
+}
+
+@media all and (min-width: 576px) {
+  .jumbotron__cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .jumbotron__cta .btn {
+    width: 180px;
+  }
+
+  .jumbotron__cta h5 {
+    margin: 0 20px;
+  }
+
+  .jumbotron__banner--logo {
+    max-width: 570px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__cta {
+    display: block;
+  }
+}
+
+@media all and (min-width: 1199px) {
+  .nav:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .jumbotron {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .jumbotron__text {
+    text-align: left;
+  }
+
+  .jumbotron__cta {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .jumbotron__cta span {
+    text-align: left;
+  }
+
+  .jumbotron__banner--logo {
+    width: 570px;
+  }
 }
 
 /****************************************************
