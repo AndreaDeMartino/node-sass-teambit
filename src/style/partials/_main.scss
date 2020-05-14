@@ -18,14 +18,17 @@
   }
 }
 
-.feedback{
+.feedback,
+.reviews{
   @include u--main-section__lay-2;
 }
 
 
-.surveys{
+.surveys,
+.praise{
   @include u--main-section__lay-2(right);
 }
+
 
 // Medium Device
 @media all and (min-width: 768px){
@@ -42,7 +45,9 @@
 // Large Device
 @media all and (min-width: 1199px){
   .feedback,
-  .surveys{
+  .surveys,
+  .reviews,
+  .praise{
     &__logo{
       img{
         max-width: 768px;
