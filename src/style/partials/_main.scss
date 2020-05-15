@@ -34,6 +34,17 @@
   @import 'partials/section-2';
 }
 
+.get-started{
+  text-align: center;
+  padding-top: 70px;
+  background-color: $main--bg;
+  @import 'partials/section-3';
+  &__wrapper{
+    @include u--wrapper(90%);
+  }
+}
+
+
 // Medium Device
 @include tablet{
 .people__items,
@@ -62,6 +73,25 @@
     }
     &__info{
       text-align: left;
+    }
+  }
+
+  .get-started{
+    &__wrapper{
+      max-width: 628px;
+    }
+    &__cta{
+      @include u--flex;
+      flex-wrap: wrap;
+      .btn{
+        width: 200px;
+      }
+      h5{
+        margin: 0 20px;
+      }
+      span{
+        text-align: center;
+      }
     }
   }
 }

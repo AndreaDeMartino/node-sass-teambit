@@ -1,0 +1,48 @@
+&__hero{
+  margin-bottom: 40px;
+  h2{
+    font-size: 40px;
+  }
+  
+}
+
+.content{
+  background-color: $white;
+  padding: 30px 40px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-align: left;
+  &__text{
+    p{
+      padding-bottom: 30px;
+    }
+  }
+  .sub-text{
+    @include u--flex;
+    img{
+      padding-right: 20px;
+      height: 40px;
+    }
+    &__container{
+      text-align: left;
+      &--name{
+        color:$btn--blue;
+      }
+    }
+  }
+}
+
+&__cta{
+  padding-bottom: 50px;
+  @include u--flex(column);
+    .btn{
+      @include u--btn($btn--blue,#fff);
+      margin: 10px 0;
+    }
+    span{
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+}

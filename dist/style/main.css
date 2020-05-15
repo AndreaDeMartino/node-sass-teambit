@@ -452,6 +452,77 @@ a {
   max-width: 270px;
 }
 
+.get-started {
+  text-align: center;
+  padding-top: 70px;
+  background-color: #ffe7d2;
+}
+.get-started__hero {
+  margin-bottom: 40px;
+}
+.get-started__hero h2 {
+  font-size: 40px;
+}
+.get-started .content {
+  background-color: #fff;
+  padding: 30px 40px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-align: left;
+}
+.get-started .content__text p {
+  padding-bottom: 30px;
+}
+.get-started .content .sub-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.get-started .content .sub-text img {
+  padding-right: 20px;
+  height: 40px;
+}
+.get-started .content .sub-text__container {
+  text-align: left;
+}
+.get-started .content .sub-text__container--name {
+  color: #2e4691;
+}
+.get-started__cta {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.get-started__cta .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #2e4691;
+  color: #fff;
+  margin: 10px 0;
+}
+.get-started__cta .btn--logo {
+  height: 14px;
+  margin-right: 5px;
+}
+.get-started__cta span {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.get-started__wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .people__items,
 .solution__items {
@@ -487,5 +558,25 @@ a {
 .reviews__info,
 .praise__info {
     text-align: left;
+  }
+
+  .get-started__wrapper {
+    max-width: 628px;
+  }
+  .get-started__cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .get-started__cta .btn {
+    width: 200px;
+  }
+  .get-started__cta h5 {
+    margin: 0 20px;
+  }
+  .get-started__cta span {
+    text-align: center;
   }
 }
