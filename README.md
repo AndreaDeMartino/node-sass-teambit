@@ -27,7 +27,7 @@
 
 ### :desktop_computer: Project Preview:
 
-![](img/screen.png)
+![](src/img/screen.png)
 
 
 
